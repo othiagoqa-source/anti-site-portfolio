@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nik Fotógrafo - Conteúdo Visual</title>
+  </head>
+  <body>
+    <!-- Corner UI (Always on top) -->
+    <header class="corner-ui top-left" id="brand-logo">
+      <a href="#home">NIK<br/>FOTÓGRAFO</a>
+    </header>
+    
+    <nav class="corner-ui top-right">
+      <button class="corner-btn rotate-text" id="menu-btn" aria-expanded="false" aria-controls="menu-overlay">MENU</button>
+    </nav>
+    
+    <nav class="corner-ui bottom-right" id="contact-corner">
+      <button class="corner-btn rotate-text" id="contact-btn" aria-expanded="false" aria-controls="contact-overlay">CONTATO</button>
+    </nav>
+
+    <div class="corner-ui bottom-left">
+      <button class="corner-btn plus-btn" id="plus-btn" aria-expanded="false" aria-controls="menu-overlay" aria-label="Abrir Categorias">
+        <span class="plus-icon"></span>
+      </button>
+    </div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay" role="dialog" aria-modal="true" aria-label="Menu Principal" hidden>
+      <button class="menu-close rotate-text" id="menu-close" aria-label="Fechar menu">FECHAR</button>
+      
+      <div class="menu-layout-grid">
+        <div class="menu-area-brand"></div>
+
+        <div class="menu-area-contact fly-in-target">
+          <button class="menu-contact-btn" id="contact-from-menu">CONTATO</button>
+          <div class="menu-socials">
+            <a href="https://www.instagram.com/nikolasoliveirafotografia/" target="_blank">INSTAGRAM</a>
+          </div>
+        </div>
+
+        <div class="menu-area-main-links fly-in-target" style="transition-delay: 0.1s;">
+          <a href="#portfolio" class="menu-giant-link menu-link-close">PORTFÓLIO</a>
+          <a href="#about" class="menu-giant-link menu-link-close">SOBRE NÓS</a>
+        </div>
+
+        <div class="menu-area-utils fly-in-target" style="transition-delay: 0.2s;">
+          <a href="#" class="menu-util-link">FAQ</a>
+        </div>
+
+        <div class="menu-area-footer fly-in-target" style="transition-delay: 0.3s;">
+          <a href="#">POLÍTICA DE PRIVACIDADE</a>
+          <a href="#">DIREITOS COMERCIAIS</a>
+          <a href="#">PROJETO CRIATIVO</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Slide-in Overlay -->
+    <div class="contact-overlay" id="contact-overlay" role="dialog" aria-modal="true" aria-label="Contato" hidden>
+      
+      <!-- Split Background: White Header Area -->
+      <div class="contact-header-section">
+        <div class="contact-header-content">
+          <div class="contact-title-col fly-in-target">
+            <h2 class="contact-title">CONECTE-SE<br/>CONOSCO</h2>
+          </div>
+          <div class="contact-info-col fly-in-target" style="transition-delay: 0.1s;">
+            <div class="contact-info">
+              <p><strong>PESSOALNIKOLAS@GMAIL.COM</strong></p>
+              <p><strong>+55 (22) 99801-6885</strong></p>
+            </div>
+            <p class="contact-intro">
+              PARA FALAR COM O ESTÚDIO NIK FOTÓGRAFO OU PARA SOLICITAR UMA COLEÇÃO DETALHADA DOS NOSSOS SERVIÇOS, SINTA-SE À VONTADE PARA PREENCHER SUAS INFORMAÇÕES E ENTRAREMOS EM CONTATO EM ATÉ 24 HORAS.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Split Background: Grey Form Area -->
+      <div class="contact-form-section">
+        <form class="luxury-grid-form" action="#" method="POST" onsubmit="event.preventDefault();">
+          
+          <div class="form-cell input-wrapper fly-in-target" style="transition-delay: 0.2s;">
+            <input type="text" id="name" class="luxury-input" required />
+            <label for="name" class="floating-label">NOME COMPLETO</label>
+          </div>
+          
+          <div class="form-cell input-wrapper fly-in-target" style="transition-delay: 0.25s;">
+            <input type="email" id="email" class="luxury-input" required />
+            <label for="email" class="floating-label">E-MAIL</label>
+          </div>
+          
+          <div class="form-cell input-wrapper fly-in-target" style="transition-delay: 0.3s;">
+            <input type="text" id="location" class="luxury-input" required />
+            <label for="location" class="floating-label">ONDE VOCÊ MORA?</label>
+          </div>
+
+          <div class="form-cell input-wrapper custom-select-wrapper fly-in-target" style="transition-delay: 0.35s;">
+            <input type="hidden" id="event-type-hidden" required>
+            <div class="custom-select-trigger luxury-input" tabindex="0">
+            </div>
+            <label class="floating-label">TIPO DE EVENTO <span class="label-arrow">▼</span></label>
+            
+            <div class="custom-select-dropdown">
+              <div class="custom-option" data-value="casamento">CASAMENTO</div>
+              <div class="custom-option" data-value="ensaio-casal">ENSAIO DE CASAL / PRÉ-WEDDING</div>
+              <div class="custom-option" data-value="ensaio-infantil">ENSAIO INFANTIL / FAMÍLIA</div>
+              <div class="custom-option" data-value="ensaio-adulto">ENSAIO ADULTO</div>
+              <div class="custom-option" data-value="aniversario">ANIVERSÁRIO / EVENTOS</div>
+              <div class="custom-option" data-value="video">VÍDEO / REELS</div>
+              <div class="custom-option" data-value="comercial">COMERCIAL / INSTITUCIONAL</div>
+              <div class="custom-option" data-value="outro">OUTRO</div>
+            </div>
+          </div>
+
+          <div class="form-cell input-wrapper custom-select-wrapper fly-in-target" style="transition-delay: 0.4s;">
+            <input type="hidden" id="role-hidden" required>
+            <div class="custom-select-trigger luxury-input" tabindex="0">
+            </div>
+            <label class="floating-label">QUAL É O SEU PAPEL? <span class="label-arrow">▼</span></label>
+
+            <div class="custom-select-dropdown">
+              <div class="custom-option" data-value="noiva">NOIVA</div>
+              <div class="custom-option" data-value="noivo">NOIVO</div>
+              <div class="custom-option" data-value="cerimonialista">CERIMONIALISTA</div>
+              <div class="custom-option" data-value="outro">OUTRO</div>
+            </div>
+          </div>
+
+          <div class="form-cell input-wrapper custom-date-wrapper luxury-input fly-in-target" style="transition-delay: 0.45s; cursor: pointer;">
+            <label class="floating-label">DATA <span class="label-arrow">▼</span></label>
+          </div>
+
+          <div class="form-cell input-wrapper fly-in-target" style="transition-delay: 0.5s;">
+            <input type="text" id="event-location" class="luxury-input" required />
+            <label for="event-location" class="floating-label">LOCAL DO EVENTO</label>
+          </div>
+
+          <div class="form-cell input-wrapper custom-select-wrapper fly-in-target" style="transition-delay: 0.55s;">
+            <input type="hidden" id="guests-hidden" required>
+            <div class="custom-select-trigger luxury-input" tabindex="0">
+            </div>
+            <label class="floating-label">NÚMERO DE CONVIDADOS <span class="label-arrow">▼</span></label>
+
+            <div class="custom-select-dropdown">
+              <div class="custom-option" data-value="0-50">0 - 50</div>
+              <div class="custom-option" data-value="51-150">51 - 150</div>
+              <div class="custom-option" data-value="150+">150+</div>
+            </div>
+          </div>
+
+          <div class="form-cell input-wrapper custom-select-wrapper fly-in-target" style="transition-delay: 0.6s;">
+            <input type="hidden" id="coverage-hidden" required>
+            <div class="custom-select-trigger luxury-input" tabindex="0">
+            </div>
+            <label class="floating-label">COBERTURA FOTOGRÁFICA <span class="label-arrow">▼</span></label>
+
+            <div class="custom-select-dropdown">
+              <div class="custom-option" data-value="meio-dia">MEIO DIA</div>
+              <div class="custom-option" data-value="dia-inteiro">DIA INTEIRO</div>
+              <div class="custom-option" data-value="multi-dia">MÚLTIPLOS DIAS</div>
+            </div>
+          </div>
+
+          <div class="form-cell input-wrapper fly-in-target" style="transition-delay: 0.65s;">
+            <input type="text" id="instagram" class="luxury-input" />
+            <label for="instagram" class="floating-label">INSTAGRAM</label>
+          </div>
+
+          <div class="form-cell form-cell-full input-wrapper fly-in-target" style="transition-delay: 0.7s;">
+            <textarea id="message" class="luxury-input" rows="1" required></textarea>
+            <label for="message" class="floating-label">MENSAGEM</label>
+          </div>
+
+          <div class="form-cell form-cell-full flex-row fly-in-target" style="transition-delay: 0.75s;">
+            <label class="luxury-checkbox">
+              <input type="checkbox" required />
+              <span class="checkmark"></span>
+              <span class="checkbox-text">EU CONSINTO QUE AS INFORMAÇÕES ENVIADAS ACIMA SEJAM REGISTRADAS E ARMAZENADAS PARA OS FINS DE FORNECER SERVIÇOS RELACIONADOS À MINHA CONSULTA.</span>
+            </label>
+            
+            <button type="submit" class="luxury-submit">
+              ENVIAR <span class="arrow">&#10140;</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Grand Finale: Massive Contact Footer -->
+      <div class="contact-footer-section">
+        <div class="contact-footer-grid">
+          
+          <div class="contact-footer-col left-col fly-in-target" style="transition-delay: 0.8s;">
+            <p><strong>PESSOALNIKOLAS@GMAIL.COM</strong></p>
+            <p><strong>+55 (22) 99801-6885</strong></p>
+            <div class="contact-footer-socials">
+              <a href="https://www.instagram.com/nikolasoliveirafotografia/" target="_blank">INSTAGRAM</a>
+            </div>
+          </div>
+          
+          <div class="contact-footer-col center-col fly-in-target" style="transition-delay: 0.85s;">
+            <button class="footer-menu-btn" id="contact-footer-menu-btn">MENU</button>
+          </div>
+
+          <div class="contact-footer-col right-col fly-in-target" style="transition-delay: 0.9s;">
+            <p>SITE POR<br/><a href="https://lab.portti.link/" target="_blank"><strong>PORTTI LAB</strong></a></p>
+            <p class="copyright">©2026<br/>NIK FOTÓGRAFO<br/>- TODOS OS DIREITOS RESERVADOS</p>
+          </div>
+          
+        </div>
+        
+        <!-- Giant Logo anchor -->
+        <h1 class="contact-huge-brand fly-in-target" style="transition-delay: 1s;">
+          NIK<br/>FOTÓGRAFO
+        </h1>
+      </div>
+
+    </div>
+
+    <!-- Main Content: Full-Bleed -->
+    <main class="main-content" id="home">
+      <!-- Content remains unchanged -->
+      <section class="portfolio immersive-grid" id="portfolio" aria-label="Portfólio">
+        <div class="masonry-grid" id="portfolio-grid">
+          <!-- Populated by main.js -->
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
