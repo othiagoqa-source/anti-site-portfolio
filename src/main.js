@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const img = document.createElement('img');
       img.className = 'masonry-img';
-      img.src = `/fotos/${photo}`;
+      img.src = `./fotos/${photo}`;
       img.alt = `Fotografia Nikolas ${index + 1}`;
       img.loading = 'lazy'; // crucial for performance
       img.decoding = 'async'; // frees main thread from decoding lag
